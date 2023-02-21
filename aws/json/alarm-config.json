@@ -15,20 +15,20 @@
       "MetricStat": {
           "Metric": {
               "Namespace": "AWS/Billing",
-              "MetricName": "EstimatedCharges",
+              "MetricName": "AWS Bootcamp Billing Alarm",
               "Dimensions": [{
                   "Name": "Currency",
                   "Value": "USD"
               }]
           },
-          "Period": 86400,
+          "Period": 21600,
           "Stat": "Maximum"
       },
       "ReturnData": false
   },
   {
       "Id": "e1",
-      "Expression": "IF(RATE(m1)>0,RATE(m1)*86400,0)",
+      "Expression": "IF(RATE(m1)>0,RATE(m1)*21600,0)",
       "Label": "DailyEstimatedCharges",
       "ReturnData": true
   }]
